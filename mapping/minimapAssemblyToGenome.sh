@@ -11,7 +11,7 @@
 cd $PBS_O_WORKDIR
 
 ##------------------------------------------------------------------#
-## script expects input names for genome and nanopores.fasta files!
+## script expects input names for genome and assembly.fasta files!
 ## call it with qsub -v genome=genomename.fasta,nano=nanopores.fasta minimapTranscriptsToGenome.sh
 ##------------------------------------------------------------------#
 
