@@ -21,7 +21,7 @@ OUTg=${genome%%.fasta}
 OUT=${OUTt}to${OUTg}
 
 $minimap -x splice -K 10000M -t 12 $genome $transcripts -o ${OUT}.paf
-$minimap -ax splice -K 10000M -t 12 $genome Trinity_day1.fasta -o ${OUT}.sam
+$minimap -ax splice -K 10000M -t 12 $genome $transcripts -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
 $sambamba view -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
