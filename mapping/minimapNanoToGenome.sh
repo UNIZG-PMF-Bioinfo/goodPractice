@@ -24,7 +24,7 @@ $minimap -x map-ont -K10000M -p0.95 -t 12 $genome $nano -o ${OUT}.paf
 $minimap -ax map-ont -K10000M -p0.95 -t 12 $genome $nano -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
-$sambamba view -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
+$sambamba view -F "" -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
 $sambamba sort -m 80GB --tmpdir tmp -t 12 ${OUT}.bam
 $sambamba flagstat -t 12 ${OUT}.sorted.bam > ${OUT}.flagstat.txt
 
