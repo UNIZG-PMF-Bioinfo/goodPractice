@@ -27,13 +27,13 @@ nano
   - Nanopores are mapped using -x map-ont -y -K10000M -p 0.95 
 Call: 
 ```
-qsub -v genome=genome.fasta,nano=nanopores.fasta minimapTranscriptsToGenome.sh  
+qsub -v genome=genome.fasta,nano=nanopores.fasta minimapNanoToGenome.sh  
 ```
 assembly  
   - another assembly is mapped using -x asm20 -Y -N100 -p 0.98 -K10000M  
 Call: 
 ```
-qsub -v genome=genome.fasta,assembly=assembly2.fasta minimapTranscriptsToGenome.sh  
+qsub -v genome=genome.fasta,assembly=assembly2.fasta minimapAssemblyToGenome.sh  
 ```
 
 paired reads 
@@ -41,7 +41,7 @@ paired reads
   - works also for RNAseq reads but preferred is splice aware STAR or other.  
 Call: 
 ```
-qsub -v genome=genome.fasta,reads=reads.fasta minimapTranscriptsToGenome.sh  
+qsub -v genome=genome.fasta,reads=reads.fasta minimapShortReadsToGenome.sh  
 ```
 
 
