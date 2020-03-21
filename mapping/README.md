@@ -45,5 +45,11 @@ paired reads
 qsub -v genome=genome.fasta,reads1=reads1.fasta,reads2=reads2.fasta minimapShortReadsToGenome.sh  
 ```
 
-
+RNAseq reads:  
+  - rna .fq.gz paired reads mapped to genome with splice site aware STAR.
+  - is not modified to map to repeats!  
+```
+qsub -v genome=genome.fasta,rna1=rna1.fq.gz,rna2=rna2.fq.gz,OUT=rnaSTARtoGenome STARtoGenome.sh
+```
+  
 
