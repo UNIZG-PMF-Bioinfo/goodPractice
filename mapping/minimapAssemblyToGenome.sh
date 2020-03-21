@@ -1,6 +1,6 @@
 #!/bin/bash
 # job name
-#PBS -N mmSR
+#PBS -N mmAssembly
 ## when and who to mail - change if you want mail and remove one starting # 
 ##PBS -m bea
 ## PBS -M your@mail.com
