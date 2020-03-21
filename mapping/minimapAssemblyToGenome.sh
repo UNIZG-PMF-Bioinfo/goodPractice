@@ -24,7 +24,7 @@ $minimap -x asm20 -Y -N100 -p 0.98 -K 10000M -t12 $genome $assembly -o ${OUT}.pa
 $minimap -ax asm20 -Y -N100 -p 0.98 -K 10000M -t12 $genome $assembly -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
-$sambamba view -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
+$sambamba view -F "" -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
 $sambamba sort -m 80GB --tmpdir tmp -t 12 ${OUT}.bam
 $sambamba flagstat -t 12 ${OUT}.sorted.bam > ${OUT}.flagstat.txt
 
