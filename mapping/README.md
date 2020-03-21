@@ -3,7 +3,7 @@ All of them differ in parameters for mapping and expected input files. They are 
 
 ### INPUTS: 
 ```
-  - varname=whattomap.fasta (varname changes in script call depending on what you map!)  
+  - varname=whattomap.fasta (varname changes in script call depending on what you map! STAR expects .fq.gz)  
   - genome=genome.fasta  
 ```
 ### OUTPUTS:  
