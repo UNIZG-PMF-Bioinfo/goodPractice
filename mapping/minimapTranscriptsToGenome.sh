@@ -30,3 +30,4 @@ $sambamba flagstat -t 12 ${OUT}.sorted.bam > ${OUT}.flagstat.txt
 
 rm ${OUT}.sam ${OUT}.sam 
 rm -r tmp
+chmod 444 ${OUT}*
