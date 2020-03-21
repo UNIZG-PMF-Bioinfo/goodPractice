@@ -39,9 +39,10 @@ qsub -v genome=genome.fasta,assembly=assembly2.fasta minimapAssemblyToGenome.sh
 paired reads 
   - Illumina reads mapped with -x sr  
   - works also for RNAseq reads but preferred is splice aware STAR or other.  
+  - make sure reads file ends with somename*1.fasta* and somename2.fasta
 Call: 
 ```
-qsub -v genome=genome.fasta,reads=reads.fasta minimapShortReadsToGenome.sh  
+qsub -v genome=genome.fasta,reads1=reads1.fasta,reads2=reads2.fasta minimapShortReadsToGenome.sh  
 ```
 
 
