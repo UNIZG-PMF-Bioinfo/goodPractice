@@ -18,9 +18,9 @@ cd $PBS_O_WORKDIR
 minimap=/common/WORK/mfabijanic/programs/miniconda3/bin/minimap2
 OUTt=${transcripts%%.fasta}
 OUTg=${genome%%.fasta}
-OUT={OUTt}to{$OUTg}
+OUT=${OUTt}to${OUTg}
 
-$minimap -x splice -K 10000M -t 12 $genome transcripts -o ${OUT}.paf
+$minimap -x splice -K 10000M -t 12 $genome $transcripts -o ${OUT}.paf
 $minimap -ax splice -K 10000M -t 12 $genome Trinity_day1.fasta -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
