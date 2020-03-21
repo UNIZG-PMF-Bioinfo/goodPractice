@@ -2,7 +2,7 @@
 
 ### minimapTranscriptsToGenome.sh   
 
-Maps transcripts to genome.  
+Maps transcripts to genome using minimap -x splice.  
 
 INPUTS: 
 ```
