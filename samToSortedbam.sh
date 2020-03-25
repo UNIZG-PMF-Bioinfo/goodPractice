@@ -12,3 +12,4 @@ $SAMBAMBA sort -m 100GB --tmpdir tmp -t 6 ${IN}.bam
 $SAMBAMBA flagstat -t 10 ${IN}.sorted.bam > ${IN}.flagstat.txt
 rm ${IN}.sam ${IN}.bam
 rm -r tmp
+chmod 755 * 
