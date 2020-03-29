@@ -11,13 +11,13 @@
 cd $PBS_O_WORKDIR
 
 ##------------------------------------------------------------------#
-## script expects input names for genome and reads1.fasta and reads2.fasta files!
-## be careful that reads1 file name ends in sufix 1.fasta !
-## call it with qsub -v genome=genomename.fasta,nano=nanopores.fasta minimapTranscriptsToGenome.sh
+## script expects input names for genome and reads1.fq and reads2.fq files!
+## be careful that reads1 file name ends in sufix 1.fq !
+## call it with qsub -v genome=genomename.fasta,reads1=reads1.fq,reads2=reads2.fq minimapShortReadsToGenome.sh
 ##------------------------------------------------------------------#
 
 minimap=/common/WORK/mfabijanic/programs/miniconda3/bin/minimap2
-OUTn=${reads%%1.fasta}
+OUTn=${reads%%1.fq}
 OUTg=${genome%%.fasta}
 OUT=${OUTn}to${OUTg}
 
