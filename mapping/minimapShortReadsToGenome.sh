@@ -17,7 +17,7 @@ cd $PBS_O_WORKDIR
 ##------------------------------------------------------------------#
 
 minimap=/common/WORK/mfabijanic/programs/miniconda3/bin/minimap2
-OUTn=${reads%%1.fq}
+OUTn=${reads1%%1.fq}
 OUTg=${genome%%.fasta}
 OUT=${OUTn}to${OUTg}
 
