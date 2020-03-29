@@ -31,4 +31,5 @@ $sambamba flagstat -t 12 ${OUT}.sorted.bam > ${OUT}.flagstat.txt
 
 rm ${OUT}.sam ${OUT}.sam 
 rm -r tmp
+sambamba depth region -t 12 -c0 -o ${OUT}.coverage.txt -L chrInfo.txt -T 0 -T 10 -T 50 -T 100 -T 200 ${OUT}.sorted.bam
 chmod 444 ${OUT}*
