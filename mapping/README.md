@@ -12,6 +12,7 @@ All of them differ in parameters for mapping and expected input files. They are 
   - whattomaptogenome.sorted.bam  
   - whattomaptogenome.sorted.bam.bai  
   - whattomaptogenome.flagstat.txt  
+  - whattomaptogenome.coverage.txt
 ```
 
 ### details :   
