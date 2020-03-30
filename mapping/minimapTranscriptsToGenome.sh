@@ -28,6 +28,6 @@ $sambamba view -F "" -t 12 -f bam -S -o ${OUT}.bam ${OUT}.sam
 $sambamba sort -m 80GB --tmpdir tmp -t 12 ${OUT}.bam
 $sambamba flagstat -t 12 ${OUT}.sorted.bam > ${OUT}.flagstat.txt
 
-rm ${OUT}.sam ${OUT}.sam 
+rm ${OUT}.sam ${OUT}.bam 
 rm -r tmp
 chmod 444 ${OUT}*
