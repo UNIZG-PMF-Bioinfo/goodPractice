@@ -20,7 +20,7 @@ OUTn=${nano%%.fasta}
 OUTg=${genome%%.fasta}
 OUT=${OUTn}to${OUTg}
 
-$minimap -x map-ont -Y -K10000M -p0.95 -t 12 $genome $nano -o ${OUT}.paf
+$minimap -x map-ont -c -Y -K10000M -p0.95 -t 12 $genome $nano -o ${OUT}.paf
 $minimap -ax map-ont -Y -K10000M -p0.95 -t 12 $genome $nano -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
