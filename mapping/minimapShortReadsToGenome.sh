@@ -21,7 +21,7 @@ OUTn=${reads1%%1.fq}
 OUTg=${genome%%.fasta}
 OUT=${OUTn}to${OUTg}
 
-$minimap -x sr -Y -K 10000M -t 12 $genome $reads1 $reads2 -o ${OUT}.paf
+$minimap -x sr -c -Y -K 10000M -t 12 $genome $reads1 $reads2 -o ${OUT}.paf
 $minimap -ax sr -Y -K 10000M -t 12 $genome $reads1 $reads2 -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
