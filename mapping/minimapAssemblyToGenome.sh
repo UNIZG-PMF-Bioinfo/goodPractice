@@ -12,7 +12,7 @@ cd $PBS_O_WORKDIR
 
 ##------------------------------------------------------------------#
 ## script expects input names for genome and assembly.fasta files!
-## call it with qsub -v genome=genomename.fasta,nano=nanopores.fasta minimapTranscriptsToGenome.sh
+## call it with qsub -v genome=genomename.fasta,assembly=asm.fasta minimapTranscriptsToGenome.sh
 ##------------------------------------------------------------------#
 
 minimap=/common/WORK/mfabijanic/programs/miniconda3/bin/minimap2
@@ -20,7 +20,7 @@ OUTn=${assembly%%.fasta}
 OUTg=${genome%%.fasta}
 OUT=${OUTn}to${OUTg}
 
-$minimap -x asm20 -Y -N100 -p 0.98 -K 10000M -t12 $genome $assembly -o ${OUT}.paf
+$minimap -x -c asm20 -Y -N100 -p 0.98 -K 10000M -t12 $genome $assembly -o ${OUT}.paf
 $minimap -ax asm20 -Y -N100 -p 0.98 -K 10000M -t12 $genome $assembly -o ${OUT}.sam
 
 sambamba=/common/WORK/fhorvat/programi/sambamba/sambamba
